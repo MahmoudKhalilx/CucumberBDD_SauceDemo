@@ -1,5 +1,5 @@
 # Selenium Cucumber BDD Java - SauceDemo
-Purpose: End-to-end Selenium tests implemented with Java, Maven and Cucumber BDD for the SauceDemo sample app. This repository provides Page Object Model, cross-browser support, headless mode, parallel execution, and Allure reporting.
+End-to-end Selenium tests implemented with Java, Maven and Cucumber BDD for the SauceDemo sample app. This repository provides Page Object Model, cross-browser support, headless mode, parallel execution, and Allure reporting.
 
 
 ## Features
@@ -29,7 +29,6 @@ You can watch the full execution video here:
 
 1. Clone the repo:
     - `git clone https://github.com/MahmoudKhalilx/CucumberBDD_SauceDemo.git`
-    - `cd CucumberBDD_SauceDemo
 
 2. Run default tests (Chrome):
     - `mvn clean test`
@@ -39,9 +38,6 @@ You can watch the full execution video here:
 
 4. Run headless:
     - `mvn clean test -Dheadless=true -Dbrowser=chrome`
- 
-5. Run in parallel:
-    - `mvn clean test -Dparallel=true`
 
-6. Generate and view Allure Report
+5. Generate and view Allure Report
    - `allure serve target/allure-results`
