@@ -1,43 +1,47 @@
-# Selenium BDD Java Project
+# Selenium Cucumber BDD Java - SauceDemo
+Purpose: End-to-end Selenium tests implemented with Java, Maven and Cucumber BDD for the SauceDemo sample app. This repository provides Page Object Model, cross-browser support, headless mode, parallel execution, and Allure reporting.
+
 
 ## Features
-- Easy to maintain Page Object Model
-- Cucumber BDD (Gherkin)
-- Cross-browser support
-- Headless mode for CI/CD
-- Parallel execution
-- Allure reporting
-- Configurable through command line or properties file
+- Page Object Model architecture
+- Cucumber BDD (Gherkin) feature files
+- Cross-browser support (Chrome / Firefox)
+- Headless mode for CI
+- Parallel execution support
+- Allure test reporting
+- Configurable via command-line properties
+
+## Repository layout
+- `pom.xml` — Maven project file and dependencies
+- `src/test/java` — test code (pages, stepdefs, runners, Utils)
+- `src/test/resources` — `features`, `config.properties`, test data
+- `target` — build output and test results
+- `target/allure-results` — Allure results for report generation
 
 ## ▶️ Test Run Video
 
 You can watch the full execution video here:
 
-👉 **[Watch Test Run Video](https://drive.google.com/file/d/FILE_ID/view?usp=sharing)**  
+👉 **[Watch Test Run Video](https://drive.google.com/file/d/171PAHz1u3QG1iEjjs1GrTqYhar3yJNhY/view?usp=sharing)**  
 
 
-## Running the Tests
+## Quick start
 
-###  Default browser (Chrome)
-```
-mvn clean test
-```
+1. Clone the repo:
+    - `git clone https://github.com/MahmoudKhalilx/CucumberBDD_SauceDemo.git`
+    - `cd CucumberBDD_SauceDemo
 
+2. Run default tests (Chrome):
+    - `mvn clean test`
 
-### Run tests in Firefox
-```
-mvn clean test -Dbrowser=firefox
-```
-### Run tests in headless mode
-```
-mvn clean test -Dheadless=true -Dbrowser=firefox
-```
+3. Run Firefox or Chrome:
+    - `mvn clean test -Dbrowser=firefox`
 
-✅ Run tests in parallel mode
-```
-mvn clean test -Dparallel=true
-```
-✅ Generate and view Allure Report
-```
-allure serve target/allure-results
-```
+4. Run headless:
+    - `mvn clean test -Dheadless=true -Dbrowser=chrome`
+ 
+5. Run in parallel:
+    - `mvn clean test -Dparallel=true`
+
+6. Generate and view Allure Report
+   - `allure serve target/allure-results`
